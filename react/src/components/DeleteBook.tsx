@@ -1,0 +1,15 @@
+import axios from "axios";
+
+// [DELETE] Eliminar un libro
+const deleteBook = async (id: string) => {
+    try {
+        await axios.delete(
+            `http://localhost:9000/api/books/${id}`
+        );
+    } catch (error) {
+        console.log(error);
+    }
+};
+
+export default {deleteBook};
+

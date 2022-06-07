@@ -4,7 +4,9 @@ import axios from "axios";
 export const UpdateBook = ({...props}) => {
     const {book, setBooks, setEdit} = props;
 
-    // Editar un libro
+    // =======================================
+    // ============ UPDATE A BOOK ============
+    // =======================================
     const updateBook = async (e: any, id: string) => {
         e.preventDefault()
         await axios.put(`http://localhost:9000/api/books/${id}`, {

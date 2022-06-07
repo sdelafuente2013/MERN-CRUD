@@ -8,7 +8,9 @@ const ListBooks = () => {
     const [books, setBooks] = useState([])
     const [edit, setEdit] = useState(0);
 
-    // [GET] Listar todos los libros
+    // =======================================
+    // ============ LIST BOOKS ===============
+    // =======================================
     useEffect(() => {
         axios.get("http://localhost:9000/api/books")
             .then(response => setBooks(response.data))

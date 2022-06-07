@@ -1,9 +1,10 @@
 const express = require('express');
 const bookSchema = require("./../models/book");
-
 const router = express.Router();
 
-//Create (create a book)
+// =======================================
+// ============ CREATE BOOK ==============
+// =======================================
 router.post("/books", (req, res) => {
     const book = bookSchema(req.body);
     book
@@ -12,7 +13,9 @@ router.post("/books", (req, res) => {
         .catch((error) => res.json({mesagge: error}));
 });
 
-//Read (get all book)
+// =======================================
+// ============ GET BOOKS ================
+// =======================================
 router.get("/books", (req, res) => {
     bookSchema
         .find()
@@ -20,7 +23,9 @@ router.get("/books", (req, res) => {
         .catch((error) => res.json({mesagge: error}));
 });
 
-//Read (get a book)
+// =======================================
+// ============ GET A BOOK ===============
+// =======================================
 router.get("/books/:id", (req, res) => {
     const {id} = req.params;
     bookSchema
@@ -29,7 +34,9 @@ router.get("/books/:id", (req, res) => {
         .catch((error) => res.json({mesagge: error}));
 });
 
-//Update
+// =======================================
+// ============ UPDATE A BOOK ============
+// =======================================
 router.put("/books/:id", (req, res) => {
     const {id} = req.params;
     const {title} = req.body;
@@ -41,7 +48,9 @@ router.put("/books/:id", (req, res) => {
 });
 
 
-// Delete
+// =======================================
+// ============ DELETE A BOOK ============
+// =======================================
 router.delete("/books/:id", (req, res) => {
     const {id} = req.params;
 

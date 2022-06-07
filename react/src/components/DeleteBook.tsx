@@ -1,6 +1,8 @@
 import axios from "axios";
 
-// [DELETE] Eliminar un libro
+// =======================================
+// ============ DELETE A BOOK ============
+// =======================================
 const deleteBook = async (id: string) => {
     try {
         await axios.delete(

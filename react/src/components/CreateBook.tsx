@@ -37,6 +37,7 @@ const CreateBook = ({...props}) => {
                     className="form-control mb-2"
                     placeholder="Ingrese titulo del libro.."
                     value={book.title}
+                    required
                     onChange={handleChange}
                 />
                 <button className="btn btn-dark btn-block" type="submit">Agregar</button>

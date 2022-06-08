@@ -7,14 +7,14 @@ const router = express.Router();
 // =======================================
 router.post("/books", (req, res) => {
     const book = bookSchema(req.body);
-    if (req.body.title != " "){
-    book
+    if (req.body.title != " ") {
+        book
             .save()
             .then((data) => {
                 res.json(data)
             })
             .catch((error) => res.status(400).send("Bad request"))
-    }else{
+    } else {
         res.status(400).send("Bad request")
     }
 });
@@ -50,7 +50,7 @@ router.put("/books/:id", (req, res) => {
     bookSchema
         .updateOne({_id: id}, {$set: {title}})
         .then((data) => res.json(data))
-        .catch((error) => res.json({mesagge: error}));
+        .catch((error) => res.status(400).send("Bad request"))
 });
 
 

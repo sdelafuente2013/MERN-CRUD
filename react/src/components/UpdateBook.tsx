@@ -22,6 +22,7 @@ export const UpdateBook = ({...props}) => {
                     type="text"
                     name="title"
                     className="form-control mb-2"
+                    required
                     placeholder={book.title}
                 />
                 <button className="btn btn-dark btn-block" type="submit">Aceptar</button>

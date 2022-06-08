@@ -22,7 +22,7 @@ const CreateBook = ({...props}) => {
             })
             setBook({title: ''})
         } catch (error) {
-            console.log(error);
+            console.log("No puede crear un libro sin titulo");
         }
     }
 

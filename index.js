@@ -1,4 +1,10 @@
-const { dotenv, express, mongoose, booksRoutes, cors, port, app} = require("./routes/bookModule")
+require('dotenv').config();
+const express = require('express');
+const mongoose = require('mongoose');
+const booksRoutes = require("./routes/books");
+const cors = require('cors');
+const app = express();
+const port = 9000;
 
 // Middleware
 app.use(cors());
@@ -13,3 +19,4 @@ mongoose
 
 app.listen(port, () => console.log('Server escuchando en el puerto: ' + port));
 
+module.exports = app;

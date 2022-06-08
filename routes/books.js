@@ -7,10 +7,16 @@ const router = express.Router();
 // =======================================
 router.post("/books", (req, res) => {
     const book = bookSchema(req.body);
+    if (req.body.title != " "){
     book
-        .save()
-        .then((data) => res.json(data))
-        .catch((error) => res.json({mesagge: error}));
+            .save()
+            .then((data) => {
+                res.json(data)
+            })
+            .catch((error) => res.status(400).send("Bad request"))
+    }else{
+        res.status(400).send("Bad request")
+    }
 });
 
 // =======================================

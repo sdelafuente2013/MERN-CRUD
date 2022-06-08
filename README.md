@@ -10,7 +10,7 @@ A simple records system using MongoDB Atlas, Express.js, React.js, and Node.js w
 
 Fork, then download or clone the repo.
 ```bash
-git clone https://github.com/<your-user-name>/MERN-CRUD.git
+git clone https://github.com/sdelafuente2013/MERN-CRUD.git
 
 ```
 

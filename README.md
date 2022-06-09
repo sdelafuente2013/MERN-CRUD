@@ -43,6 +43,12 @@ Run the *development server* for React. It listens on port 3000.
 npm start
 ```
 
+
+Regarding the **Database** you don't need to do anything.
+```bash
+The .env is public (on purpose) as it contains the credentials to connect to MongoDB Atlas. So you don't have to create a DB or configure it.
+```
+
 ## To Do
 
 - [x] Create
